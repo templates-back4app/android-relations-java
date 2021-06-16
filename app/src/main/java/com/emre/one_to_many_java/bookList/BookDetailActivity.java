@@ -91,7 +91,6 @@ public class BookDetailActivity extends AppCompatActivity implements View.OnClic
             } else {
                 progressDialog.hide();
                 Toast.makeText(this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
-//                Toast.makeText(this,e.getLocalizedMessage()).show();
             }
         });
     }

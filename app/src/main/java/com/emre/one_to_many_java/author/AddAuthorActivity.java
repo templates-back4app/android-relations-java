@@ -81,6 +81,7 @@ public class AddAuthorActivity extends AppCompatActivity implements View.OnClick
     }
 
     private void addAuthor(String name){
+        //We are taking this name parameter from the input.
         progressDialog.show();
         ParseObject parseObject = new ParseObject("Author");
         parseObject.put("name", name);

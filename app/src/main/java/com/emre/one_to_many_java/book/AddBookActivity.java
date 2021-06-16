@@ -160,7 +160,7 @@ public class AddBookActivity extends AppCompatActivity implements View.OnClickLi
                 return;
             }
         } else {
-            Toast.makeText(this, "Please select a Genre", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Something went wrong!!", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -171,7 +171,7 @@ public class AddBookActivity extends AppCompatActivity implements View.OnClickLi
                 return;
             }
         } else {
-            Toast.makeText(this, "Please select a Publisher", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Something went wrong!!", Toast.LENGTH_SHORT).show();
             return;
         }
         if (recyclerViewAuthors.getAdapter() != null) {
@@ -181,14 +181,13 @@ public class AddBookActivity extends AppCompatActivity implements View.OnClickLi
                 return;
             }
         } else {
-            Toast.makeText(this, "Please select Author/s", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Something went wrong!!", Toast.LENGTH_SHORT).show();
             return;
         }
 
         progressDialog.show();
         book.put("genre", genre);
         book.put("publisher", publisher);
-//        book.put("author_relation", relation);
         book.put("title", title);
         book.put("year", year);
         book.saveInBackground(e -> {

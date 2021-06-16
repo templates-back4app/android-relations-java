@@ -82,6 +82,7 @@ public class AddGenreActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void addGenre(String name) {
+        //We are taking this name parameter from the input.
         progressDialog.show();
         ParseObject parseObject = new ParseObject("Genre");
         parseObject.put("name", name);

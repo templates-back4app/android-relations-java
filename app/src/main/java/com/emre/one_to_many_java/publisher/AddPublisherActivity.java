@@ -53,7 +53,7 @@ public class AddPublisherActivity extends AppCompatActivity implements View.OnCl
             case R.id.add:
 
                 if (inputPublisher.getText().toString().length() != 0)
-                    addGenre(inputPublisher.getText().toString());
+                    addPublisher(inputPublisher.getText().toString());
                 else
                     Toast.makeText(this, "Please write a Publisher", Toast.LENGTH_SHORT).show();
                 break;
@@ -80,7 +80,8 @@ public class AddPublisherActivity extends AppCompatActivity implements View.OnCl
     }
 
 
-    private void addGenre(String name) {
+    private void addPublisher(String name) {
+        //We are taking this name parameter from the input.
         progressDialog.show();
         ParseObject parseObject = new ParseObject("Publisher");
         parseObject.put("name", name);

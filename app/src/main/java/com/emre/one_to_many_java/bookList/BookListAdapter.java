@@ -54,7 +54,6 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListHolder> {
                 Toast.makeText(context, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 
     @Override
